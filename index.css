@@ -1,0 +1,139 @@
+/* Reset básico y fuentes (similar a tu imagen) */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    /* border-width: 0;  Considera si realmente quieres quitar todos los bordes por defecto */
+    /* border-style: solid; */
+}
+
+h1, h2, p, label, select, input, button {
+    margin: 0;
+    padding: 0;
+    /* border: 0; */ /* Evita si quieres bordes por defecto en inputs/selects */
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #151820;
+    color: #333;
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #151820;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(219, 214, 214, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group select,
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
+}
+
+.form-group input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+.form-group input[type="number"]::-webkit-outer-spin-button,
+.form-group input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+#resultado-area {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px dashed #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    min-height: 50px;
+    line-height: 1.6;
+}
+
+#resultado-area p {
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+#resultado-area p strong {
+    color: #2c3e50;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: #3498db; /* Coincide con el color del botón */
+    animation: spin 1s ease infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.error {
+    color: #e74c3c;
+    font-weight: bold;
+    text-align: center;
+}
+
+.moneda2 {
+background-color:white;
+}
